@@ -1,0 +1,204 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+	padding-bottom: 20px;
+	background: #f1f1f1;
+}
+div.clear {
+	clear: both;
+}
+
+.bg-color-white {
+	background: #fff;	
+}
+.block-padding {
+	padding: 10px;	
+}
+
+
+/** 
+ * Style for blog row
+ ****************************************************************************/
+.blog-row {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;	
+}
+.blog-row-spacing {
+	padding: 25px;
+}
+.blog-date {
+	font-family: 'Dancing Script', cursive;
+	font-weight: 1000;
+    font-size: 2.2em;
+    color: rgb(114, 9, 67);
+    
+}
+.blog-title {
+	font-family: 'Anton', sans-serif;
+	font-size: 2.7em;
+	text-transform: uppercase;
+}
+.blog-image  img{
+	max-width: 100%;
+	border: 1px solid transparent;
+	padding: 10px;
+}
+
+
+/**
+ * Common style for blog image
+ ****************************************************************************/
+.blog-image figure {
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+.blog-image figure img {
+	width: 100%;
+	opacity: 0.8;
+	text-align: center;
+}
+
+.blog-image figure figcaption {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.blog-image figure figcaption::before,
+.blog-image figure figcaption::after {
+	pointer-events: none;
+}
+
+.blog-image figure figcaption,
+.blog-image figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/**
+ * Effect on image mouse over 
+ ****************************************************************************/
+.blog-image figure.effect-layla figcaption::before,
+.blog-image figure.effect-layla figcaption::after {
+	position: absolute;
+	content: '';
+	opacity: 0;
+}
+
+.blog-image figure.effect-layla figcaption::before {
+	top: 50px;
+	right: 30px;
+	bottom: 50px;
+	left: 30px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.blog-image figure.effect-layla figcaption::after {
+	top: 30px;
+	right: 50px;
+	bottom: 30px;
+	left: 50px;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	transform: scale(1,0);
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+.blog-image figure.effect-layla h2 {
+	padding-top: 26%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+.blog-image figure.effect-layla p {
+	padding: 0.5em 2em;
+	text-transform: none;
+	opacity: 0;
+	-webkit-transform: translate3d(0,-10px,0);
+	transform: translate3d(0,-10px,0);
+}
+
+.blog-image figure.effect-layla img,
+.blog-image figure.effect-layla h2 {
+	
+}
+
+.blog-image figure.effect-layla img,
+.blog-image figure.effect-layla figcaption::before,
+.blog-image figure.effect-layla figcaption::after,
+.blog-image figure.effect-layla p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+.blog-image figure.effect-layla:hover img {
+	opacity: 0.7;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.blog-image figure.effect-layla:hover figcaption::before,
+.blog-image figure.effect-layla:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.blog-image figure.effect-layla:hover h2,
+.blog-image figure.effect-layla:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.blog-image figure.effect-layla:hover figcaption::after,
+.blog-image figure.effect-layla:hover h2,
+.blog-image figure.effect-layla:hover p,
+.blog-image figure.effect-layla:hover img {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+/* text box css */
+.bs-callout {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #eee;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    margin-bottom: 5px;
+    padding: 20px;
+}
+.bs-callout:last-child {
+    margin-bottom: 0px;
+}
+.bs-callout h2 {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+
+.bs-callout-danger h2{
+    color: #d9534f;
+}

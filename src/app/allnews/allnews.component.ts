@@ -32,6 +32,7 @@ export class AllnewsComponent implements OnInit {
   
   }
 
+  
   gettxt(){
     if (window.getSelection) {
       let text = window.getSelection().toString();
